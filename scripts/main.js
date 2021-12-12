@@ -90,7 +90,7 @@ async function getInputValue(){
     
     createText("<span class='blue'>Python Developer</span> at MZ3")
     createText("&emsp;(09.2019 - 09.2020)")
-    createText("&emsp;Technologies: Python (Django),Celery ,RabbitMQ, PostgreSQL, Selenium, Vagrant")
+    createText("&emsp;Technologies: Python (Django), Celery, RabbitMQ, PostgreSQL, Selenium, Vagrant")
 
     createText("<br>")
     createText("<span class='blue'>Python and Go Developer</span> at ZotaPay")
@@ -100,7 +100,7 @@ async function getInputValue(){
 
     createText("<span class='blue'>DevOps Engineer</span> at ZotaPay")
     createText("&emsp;(05.2021 - Present)")
-    createText("&emsp;Technologies: AWS CLI, Cloudforation, Kubernetes, Docker, GitHub Actions, Bash")
+    createText("&emsp;Technologies: AWS CLI, CloudForation, Kubernetes, Docker, GitHub Actions, Bash")
 
   }
   else if(value.toLowerCase() === "education"){
