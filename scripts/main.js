@@ -27,9 +27,9 @@ async function open_terminal(){
   await delay(1500);
   createText("You can run several commands:");
  
-  createCode("about me", "Who am i and what do i do.");
+  createCode("about", "Who am I and what I do.");
   createCode("all", "See all commands.");
-  createCode("social -a", "All my social networks.");
+  createCode("contacts", "All my contacts.");
 
   await delay(500);
   new_line();
@@ -42,9 +42,9 @@ function new_line(){
   const span1 = document.createElement("span");
   const span2 = document.createElement("span");
   p.setAttribute("class", "path")
-  p.textContent = "# user";
-  span1.textContent = " in";
-  span2.textContent = " ~/heber-leonard";
+  // p.textContent = "# user";
+  // span1.textContent = " in";
+  span2.textContent = " ~/ivan-petrov";
   p.appendChild(span1);
   p.appendChild(span2);
   app.appendChild(p);
@@ -68,36 +68,67 @@ function removeInput(){
 async function getInputValue(){
   
   const value = document.querySelector("input").value;
-  if(value === "all"){
+  if(value.toLowerCase() === "all"){
     trueValue(value);
     
-    createCode("projects", "My github page with my projects. Follow me there ;)");
-    createCode("about me", "Who am i and what do i do.");
-    createCode("social -a", "All my social networks.");
+    createCode("about", "Who am i and what i do.");
+    createCode("experience", "My working experience");
+    createCode("education", "My education and certificates");
+    createCode("contacts", "All my contacts");
     createCode("clear", "Clean the terminal.");
     
   }
-  else if(value === "projects"){
+  else if(value.toLowerCase() === "about"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
+    createText("Hi, my name is <span class='blue'>Ivan Petrov</span>")
+    createText("and I am <span class='blue'>Software Engineer</span> with interests in <span class='blue'>DevOps and ML</span>.")
   }
-  else if(value === "about me"){
+
+  else if(value.toLowerCase() === "experience"){
     trueValue(value);
-    createText("Oi, meu nome é Héber ;)")
-    createText("Desenvolvedor atualmente focado em todo o ecossistema Javascript. Utilizando principalmente a stack <span class='blue'>Node, React e React Native </span>por permitir criar aplicações de forma descomplicada e produtiva.")
+
+    
+    createText("<span class='blue'>Python Developer</span> at MZ3")
+    createText("&emsp;(09.2019 - 09.2020)")
+    createText("&emsp;Technologies: Python (Django),Celery ,RabbitMQ, PostgreSQL, Selenium, Vagrant")
+
+    createText("<br>")
+    createText("<span class='blue'>Python and Go Developer</span> at ZotaPay")
+    createText("&emsp;(09.2020 - 05.2021)")
+    createText("&emsp;Technologies: Python (Django), Go (Echo), Kafka, PostgreSQL, Docker")
+    createText("<br>")
+
+    createText("<span class='blue'>DevOps Engineer</span> at ZotaPay")
+    createText("&emsp;(05.2021 - Present)")
+    createText("&emsp;Technologies: AWS CLI, Cloudforation, Kubernetes, Docker, GitHub Actions, Bash")
+
   }
-  else if(value === "social -a"){
+  else if(value.toLowerCase() === "education"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
-    createText("<a href='https://www.linkedin.com/in/heber-leonard/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/heber-leonard</a>")
-    createText("<a href='https://www.instagram.com/heber_leonard/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/heber_leonard</a>")
-  }
-  else if(value === "social"){
-    trueValue(value);
-    createText("Didn't you mean: social -a?")
+    createText("<span class='blue'>Education</span>")
+    createText("&emsp;<i class='fas fa-university'></i> Bachelor of Economy at University of National and World Economy")
+    createText("<span class='blue'>Certificates</span>")
+    createText("&emsp;<a href='https://softuni.bg/certificates/details/63823/44b049ff' target='_blank'><i class='fab fa-python white'></i> Python Fundamentals - Software University (softuni.bg)</a>")
+    createText("&emsp;<a href='https://softuni.bg/certificates/details/66900/db4e872b' target='_blank'><i class='fab fa-python white'></i> Django Web Development - Software University (softuni.bg)</a>")
+    createText("&emsp;<a href='https://softuni.bg/certificates/details/54839/b7d56f70' target='_blank'><i class='fab fa-python white'></i> Math Concepts for Developers - Software University (softuni.bg)</a>")
+    createText("&emsp;<a href='https://softuni.bg/certificates/details/56992/7e4624e5' target='_blank'><i class='fab fa-python white'></i> Data Science - Software University (softuni.bg)</a>")
+    createText("&emsp;<a href='https://softuni.bg/certificates/details/58495/e234cb92' target='_blank'><i class='fab fa-python white'></i> Machine Learning  - Software University (softuni.bg)</a>")
+    createText("&emsp;<a href='https://softuni.bg/certificates/details/61428/ef24a131' target='_blank'><i class='fab fa-python white'></i> Deep Learning  - Software University (softuni.bg)</a>")
+    createText("&emsp;<a href='https://www.coursera.org/account/accomplishments/certificate/B4XUL2BAJKCG' target='_blank'><i class='fab fa-aws white'></i> AWS Cloud Technical Essentials - Coursera</a>")
+    createText("&emsp;<a href='https://www.coursera.org/account/accomplishments/verify/3CJV6WWZLD86' target='_blank'><i class='fab fa-aws white'></i> AWS Fundamentals: Addressing Security Risk - Coursera</a>")
+
   }
   
-  else if(value === "clear"){
+
+  else if(value.toLowerCase() === "contacts"){
+    trueValue(value);
+    createText("<a href='https://github.com/Ivan1994Petrov' target='_blank'><i class='fab fa-github white'></i> GitHub</a>")
+    createText("<a href='https://www.linkedin.com/in/ivan-hristov-petrov/' target='_blank'><i class='fab fa-linkedin-in white'></i> LinkedIn</a>")
+    createText("<i class='fas fa-envelope-square'></i> dev.ivan.petrov@gmail.com")
+    createText("<i class='fas fa-mobile-alt'></i> +359 883 501 202")
+  }
+  
+  else if(value.toLowerCase() === "clear"){
     document.querySelectorAll("p").forEach(e => e.parentNode.removeChild(e));
     document.querySelectorAll("section").forEach(e => e.parentNode.removeChild(e));
   }
