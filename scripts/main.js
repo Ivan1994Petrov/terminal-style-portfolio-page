@@ -71,11 +71,11 @@ async function getInputValue(){
   if(value.toLowerCase() === "all"){
     trueValue(value);
     
-    createCode("about", "Who am i and what i do.");
+    createCode("about", "Who am i and what i do");
     createCode("experience", "My working experience");
     createCode("education", "My education and certificates");
     createCode("contacts", "All my contacts");
-    createCode("clear", "Clean the terminal.");
+    createCode("clear", "Clean the terminal");
     
   }
   else if(value.toLowerCase() === "about"){
@@ -116,14 +116,15 @@ async function getInputValue(){
     createText("&emsp;<a href='https://softuni.bg/certificates/details/61428/ef24a131' target='_blank'><i class='fab fa-python white'></i> Deep Learning  - Software University (softuni.bg)</a>")
     createText("&emsp;<a href='https://www.coursera.org/account/accomplishments/certificate/B4XUL2BAJKCG' target='_blank'><i class='fab fa-aws white'></i> AWS Cloud Technical Essentials - Coursera</a>")
     createText("&emsp;<a href='https://www.coursera.org/account/accomplishments/verify/3CJV6WWZLD86' target='_blank'><i class='fab fa-aws white'></i> AWS Fundamentals: Addressing Security Risk - Coursera</a>")
+    createText("&emsp;<a href='https://www.coursera.org/account/accomplishments/verify/DYZMBPZARF4B' target='_blank'><i class='fab fa-aws white'></i> Building Modern Python Applications on AWS - Coursera</a>")
 
   }
   
 
   else if(value.toLowerCase() === "contacts"){
     trueValue(value);
-    createText("<a href='https://github.com/Ivan1994Petrov' target='_blank'><i class='fab fa-github white'></i> GitHub</a>")
-    createText("<a href='https://www.linkedin.com/in/ivan-hristov-petrov/' target='_blank'><i class='fab fa-linkedin-in white'></i> LinkedIn</a>")
+    createText("<a href='https://github.com/Ivan1994Petrov' target='_blank'><i class='fab fa-github white'></i> GitHub - https://github.com/Ivan1994Petrov</a>")
+    createText("<a href='https://www.linkedin.com/in/ivan-hristov-petrov/' target='_blank'><i class='fab fa-linkedin-in white'></i> LinkedIn - https://www.linkedin.com/in/ivan-hristov-petrov/</a>")
     createText("<i class='fas fa-envelope-square'></i> dev.ivan.petrov@gmail.com")
     createText("<i class='fas fa-mobile-alt'></i> +359 883 501 202")
   }
