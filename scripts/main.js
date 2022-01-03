@@ -27,9 +27,9 @@ async function open_terminal(){
   await delay(1500);
   createText("You can run several commands:");
  
-  createCode("about", "Who am I and what I do.");
-  createCode("all", "See all commands.");
-  createCode("contacts", "All my contacts.");
+  createCode("about", "Who am I and what I do");
+  createCode("all", "See all commands");
+  createCode("contacts", "All my contacts");
 
   await delay(500);
   new_line();
